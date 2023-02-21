@@ -1,0 +1,25 @@
+<html>
+  <head>
+    <script>
+      function validateForm() {
+        var username = document.forms["loginForm"]["username"].value;
+        var password = document.forms["loginForm"]["password"].value;
+        if (username == "" || password == "") {
+          alert("Username and Password are required");
+          return false;
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <form name="loginForm" onsubmit="return validateForm()" action="#">
+      <label for="username">Username:</label>
+      <input type="text" id="username" name="username">
+      <br><br>
+      <label for="password">Password:</label>
+      <input type="password" id="password" name="password">
+      <br><br>
+      <input type="submit" value="Submit">
+    </form>
+  </body>
+</html>
